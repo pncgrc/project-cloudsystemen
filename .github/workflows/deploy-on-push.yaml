@@ -6,13 +6,15 @@ on:
       - main  # Replace with your target branch if needed
 
 jobs:
-  deploy:
+  checkout-code:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-
+  setup-files:
+    needs: checkout-code
+    runs-on: ubuntu-latest
+    steps:
       - name: Setup SSH Key and Known Hosts
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -24,10 +26,13 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           echo "$KNOWN_HOSTS" > ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
-
+  deploy:
+    needs: setup-files
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy with Docker Compose
         env:
-          HOSTS: ${{ secrets.HOST }}
+          HOST: ${{ secrets.HOST }}
         run: |
           ssh -i ~/.ssh/id_rsa $HOST << 'EOF'
             cd project-cloudsystemen/  # Adjust the path
