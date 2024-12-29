@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+
   setup-files:
     needs: checkout-code
     runs-on: ubuntu-latest
@@ -26,16 +27,17 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           echo "$KNOWN_HOSTS" > ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
+
   install-sshpass:
-    needs: setup-files
     runs-on: ubuntu-latest
     steps:
       - name: Install sshpass
         run: |
           sudo apt-get update
           sudo apt-get install -y sshpass  # Install sshpass
+
   deploy:
-    needs: install-sshpass
+    needs: [setup-files, install-sshpass]
     runs-on: ubuntu-latest
     steps:
       - name: Deploy with Docker Compose
@@ -43,7 +45,8 @@ jobs:
           MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
           HOST: ${{ secrets.HOST }}
         run: |
-          sshpass -p $MY_PASSWORD $HOST << EOF
+          # Use sshpass to log in with password authentication
+          sshpass -p $MY_PASSWORD ssh -o StrictHostKeyChecking=no $HOST << EOF
             cd project-cloudsystemen/  # Adjust the path
             git pull origin main  # Pull latest changes
             docker compose down  # Stop existing containers
