@@ -49,6 +49,6 @@ jobs:
           sshpass -p $MY_PASSWORD ssh -o StrictHostKeyChecking=no $HOST << EOF
             cd project-cloudsystemen/  # Adjust the path
             git pull origin main
-            sudo docker-compose down  # Stop existing containers
-            sudo docker-compose up  # Start updated containers
+            docker-compose down  # Stop existing containers
+            docker-compose up  # Start updated containers
           EOF
