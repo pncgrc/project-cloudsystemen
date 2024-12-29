@@ -1,0 +1,14 @@
+<%- include("./partials/header") %>
+<%- include("./partials/logout-section") %>
+<article class="ability-detail article-ability <%= pokeData.favoriteAbility.type %>">
+    <h2><%= pokeData.favoriteAbility.name%></h1>
+    <ul>
+        <li>Description: <%= pokeData.favoriteAbility.description %></li>
+        <li>Type: <%= pokeData.favoriteAbility.type %></li>
+        <li>Power: <%= pokeData.favoriteAbility.power === null ? "N/A" : pokeData.favoriteAbility.power %></li>
+        <li>Accuracy: <%= pokeData.favoriteAbility.accuracy === null ? "N/A" : pokeData.favoriteAbility.accuracy %></li>
+        <li>Move ID: <%= pokeData.favoriteAbility.id %></li>
+    </ul>
+</article>
+
+<%- include("./partials/footer") %>

@@ -1,0 +1,211 @@
+[
+    {
+        "id": 7,
+        "name": "Squirtle",
+        "nickname": "Squirtle",
+        "description": "When it retracts its long neck into its shell, it squirts out water with vigorous force.",
+        "order": 7,
+        "active": true,
+        "imageUrl": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-pncgrc/main/project/pokemon-images/7.png",
+        "type": "water",
+        "hobbies": ["swimming", "water fights"],
+        "favoriteAbility": {
+            "id": 5,
+            "name": "Hydro Pump",
+            "type": "water",
+            "power": 110,
+            "accuracy": 80,
+            "description": "The target is blasted by a huge volume of water launched under great pressure."
+        }
+    },
+    {
+        "id": 25,
+        "name": "Pikachu",
+        "nickname": "Pikachu",
+        "description": "Whenever Pikachu comes across something new, it blasts it with a jolt of electricity.",
+        "order": 25,
+        "active": true,
+        "imageUrl": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-pncgrc/main/project/pokemon-images/25.png",
+        "type": "electric",
+        "hobbies": ["exploring", "training battles"],
+        "favoriteAbility": {
+            "id": 6,
+            "name": "Thunderbolt",
+            "type": "electric",
+            "power": 90,
+            "accuracy": 100,
+            "description": "A strong electric blast crashes down on the target. This may also leave the target with paralysis."
+        }
+    },
+    {
+        "id": 16,
+        "name": "Pidgey",
+        "nickname": "Pidgey",
+        "description": "A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand.",
+        "order": 16,
+        "active": true,
+        "imageUrl": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-pncgrc/main/project/pokemon-images/16.png",
+        "type": "flying",
+        "hobbies": ["flying", "foraging"],
+        "favoriteAbility": {
+            "id": 6,
+            "name": "Gust",
+            "type": "flying",
+            "power": 40,
+            "accuracy": 100,
+            "description": "A gust of wind is whipped up by wings and launched at the target to inflict damage."
+        }
+    },
+    {
+        "id": 132,
+        "name": "Ditto",
+        "nickname": "Ditto",
+        "description": "When it spots an enemy, its body transfigures into an almost perfect copy of its opponent.",
+        "order": 132,
+        "active": true,
+        "imageUrl": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-pncgrc/main/project/pokemon-images/132.png",
+        "type": "normal",
+        "hobbies": ["mimicking", "transforming"],
+        "favoriteAbility": {
+            "id": 7,
+            "name": "Transform",
+            "type": "normal",
+            "power": null,
+            "accuracy": null,
+            "description": "The user transforms into a copy of the target right down to having the same move set."
+        }
+    },
+    {
+        "id": 95,
+        "name": "Onix",
+        "nickname": "Onix",
+        "description": "As it digs through the ground, it absorbs many hard objects. This is what makes its body so solid.",
+        "order": 95,
+        "active": false,
+        "imageUrl": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-pncgrc/main/project/pokemon-images/95.png",
+        "type": "rock",
+        "hobbies": ["digging", "rock climbing"],
+        "favoriteAbility": {
+            "id": 8,
+            "name": "Rock Throw",
+            "type": "rock",
+            "power": 50,
+            "accuracy": 90,
+            "description": "The user picks up and throws a small rock at the target to attack."
+        }
+    },
+    {
+        "id": 20,
+        "name": "Raticate",
+        "nickname": "Raticate",
+        "description": "Its hind feet are webbed. They act as flippers, so it can swim in rivers and hunt for prey.",
+        "order": 20,
+        "active": true,
+        "imageUrl": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-pncgrc/main/project/pokemon-images/20.png",
+        "type": "normal",
+        "hobbies": ["hunting", "swimming"],
+        "favoriteAbility": {
+            "id": 9,
+            "name": "Hyper Fang",
+            "type": "normal",
+            "power": 80,
+            "accuracy": 90,
+            "description": "The user bites hard on the target with its sharp front fangs. This may also make the target flinch."
+        }
+    },
+    {
+        "id": 129,
+        "name": "Magikarp",
+        "nickname": "Magikarp",
+        "description": "For no reason, it jumps and splashes about, making it easy for predators like Pidgeotto to catch it mid-jump.",
+        "order": 129,
+        "active": false,
+        "imageUrl": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-pncgrc/main/project/pokemon-images/129.png",
+        "type": "water",
+        "hobbies": ["splashing", "jumping"],
+        "favoriteAbility": {
+            "id": 5,
+            "name": "Splash",
+            "type": "water",
+            "power": 0,
+            "accuracy": null,
+            "description": "The user just flops and splashes around to no effect at all..."
+        }
+    },
+    {
+        "id": 35,
+        "name": "Clefairy",
+        "nickname": "Clefairy",
+        "description": "Its magical and cute appeal has many admirers. It is rare and found only in certain areas.",
+        "order": 35,
+        "active": true,
+        "imageUrl": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-pncgrc/main/project/pokemon-images/35.png",
+        "type": "fairy",
+        "hobbies": ["dancing", "singing"],
+        "favoriteAbility": {
+            "id": 10,
+            "name": "Moonblast",
+            "type": "fairy",
+            "power": 95,
+            "accuracy": 100,
+            "description": "Borrowing the power of the moon, the user attacks the target. This may also lower the target's Sp. Atk stat."
+        }
+    },
+    {
+        "id": 42,
+        "name": "Golbat",
+        "nickname": "Golbat",
+        "description": "It attacks in a stealthy manner, without warning. Its sharp fangs are used to bite and suck blood.",
+        "order": 42,
+        "active": false,
+        "imageUrl": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-pncgrc/main/project/pokemon-images/42.png",
+        "type": "poison",
+        "hobbies": ["hunting", "flying"],
+        "favoriteAbility": {
+            "id": 4,
+            "name": "Poison Fang",
+            "type": "poison",
+            "power": 50,
+            "accuracy": 100,
+            "description": "The user bites the target with toxic fangs. This may also leave the target badly poisoned."
+        }
+    },
+    {
+        "id": 10,
+        "name": "Caterpie",
+        "nickname": "Caterpie",
+        "description": "It releases a stench from its red antenna to repel enemies. It grows by molting repeatedly.",
+        "order": 10,
+        "active": true,
+        "imageUrl": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-pncgrc/main/project/pokemon-images/10.png",
+        "type": "bug",
+        "hobbies": ["eating leaves", "molting"],
+        "favoriteAbility": {
+            "id": 1,
+            "name": "Tackle",
+            "type": "normal",
+            "power": 40,
+            "accuracy": 100,
+            "description": "A physical attack in which the user charges and slams into the target with its whole body."
+        }
+    },
+    {
+        "id": 152,
+        "name": "The Ethical Hacker",
+        "nickname": "Hacked",
+        "description": "Revealed a security flaw in an ethical way, their wisdom message: 'Psst. You are exposing your database credentials on Github-'",
+        "order": 152,
+        "active": true,
+        "imageUrl": "https://miro.medium.com/v2/resize:fit:1280/0*ngAthWxOvKZHvsw9",
+        "type": "hacker",
+        "hobbies": ["hacking", "programming"],
+        "favoriteAbility": {
+            "id": 152,
+            "name": "Ethical hacking",
+            "type": "hacker",
+            "power": 100,
+            "accuracy": 100,
+            "description": "The reveal of a security flaw within an online application without causing harm."
+        }
+    }
+]

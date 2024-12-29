@@ -1,0 +1,8 @@
+<% if (user) { %>
+    <section class="logout-section">
+        <p>Logged in as <%= user.username %></p>
+        <form action="/logout" method="post">
+            <button type="submit">Logout</button>
+        </form>
+    </section> 
+<% } %>

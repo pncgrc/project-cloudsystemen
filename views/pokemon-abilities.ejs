@@ -1,0 +1,20 @@
+<%- include("./partials/header") %>
+<%- include("./partials/logout-section") %>
+<h2>Pokémon team abilities</h2>
+<section id="pokemon-abilities">
+    <% for (let ability of pokeAbilities) { %>
+
+        <article class="article-ability <%= ability.type %> flex-row">
+            <ul>
+                <li>Name: <a href="/abilities/<%= ability.name %>"><%= ability.name %></a></li>
+                <li>Type: <%= ability.type %></li>
+                <li>Power: <%= ability.power === null ? "N/A" : ability.power %></li>
+                <li>Accuracy: <%= ability.accuracy === null ? "N/A" :  ability.accuracy %></li>
+            </ul>
+        </article>
+        
+    <% } %>
+</section>
+
+
+<%- include("./partials/footer") %>

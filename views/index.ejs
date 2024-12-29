@@ -1,0 +1,79 @@
+<%- include("./partials/header") %>
+<%- include("./partials/logout-section") %>
+<% if (message) { %>
+    <p class="<%= message.type %>"><%= message.message %>. Logged in as <%= user.username %></p>
+<% } %>
+
+<form action="/" method="get" id="sorting">
+        <label for="search">Search for a name:</label>
+        <input type="text" id="search" name="q" value="<%= q %>">
+        <button type="submit" class="desktop-only">Search</button>
+
+    <fieldset class="mobile-only">
+        <select name="sortby">
+            <% for (let field of sortFields) { %>
+                <option value="<%= field.value %>" <% if (sortby === field.value) { %>selected<% } %>><%= field.text %></option> 
+            <% } %>
+        </select>
+        <select name="sortdirection">
+            <option value="<%= sortdirection %>"><% if (sortdirection === "asc" || sortdirection === "") { %>Ascending<% } else { %>Descending<% } %></option>
+            <% if (sortdirection === "asc") { %>
+                <option value="desc">Descending</option>
+            <% } else { %>
+                <option value="asc">Ascending</option>
+            <% } %>
+        </select>
+        <button type="submit">Filter</button>
+    </fieldset>
+</form>
+
+<!--<form action="/" method="get">
+    <select name="sortby">
+        <% for (let field of sortFields) { %>
+            <option value="<%= field.value %>" <% if (sortby === field.value) { %>selected<% } %>><%= field.text %></option> 
+        <% } %>
+    </select>
+    <select name="sortdirection">
+        <option value="<%= sortdirection %>"><% if (sortdirection === "asc" || sortdirection === "") { %>Ascending<% } else { %>Descending<% } %></option>
+        <% if (sortdirection === "asc") { %>
+            <option value="desc">Descending</option>
+        <% } else { %>
+            <option value="asc">Ascending</option>
+        <% } %>
+    </select>
+    <button type="submit">Sort</button>
+</form>-->
+
+
+<table class="pokemon-table">
+    <thead>
+        <tr>
+            <th>Picture</th>
+            <% for (let field of sortFields) { %>
+                <th>
+                    <a href="?q=<%= q %>&sortby=<%= field.value %>&sortdirection=<%= field.value === sortby ? sortdirection === 'asc' ? 'desc' : 'asc' : 'asc' %>">
+                        <%= field.text %><% if (field.value === sortby) { %><span class="arrow"><%= sortdirection === 'asc' ? '▲' : '▼' %></span><% } %></a><% if (field.value != sortby) { %><span class="invisible-arrow">▲</span><% } %>
+                </th>
+            <% } %>
+            <% if (user.role === "ADMIN") { %>
+                <th>Edit</th>
+            <% } %>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(let pokemon of pokeData) { %>
+            <tr>                
+                <td data-label="Picture"><a href="/pokemon/<%= pokemon.name %>"><img src="<%= pokemon.imageUrl %>" alt="<%= pokemon.name %>" width="75px"></a></td>
+                <td data-label="Name"><a href="/pokemon/<%= pokemon.name %>"><%= pokemon.name %></a></td>
+                <td data-label="Pokédex ID"><%= pokemon.order %></td>
+                <td data-label="Type"><span class=" type <%= pokemon.type %>"><%= pokemon.type %></td>
+                <td data-label="Meta pick"><%= pokemon.active === true ? "Yes" : "No" %></td>
+                <% if (user.role === "ADMIN") { %>
+                    <td data-label="Edit info"><a href="/pokemon/<%= pokemon.name %>/edit">Edit</a></td>
+                <% } %>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
+
+<%- include("./partials/footer") %>

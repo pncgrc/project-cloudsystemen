@@ -1,0 +1,210 @@
+[
+    {
+        "id": 55,
+        "name": "Water-gun",
+        "type": "water",
+        "power": 40,
+        "accuracy": 100,
+        "description": "The target is blasted with a forceful shot of water."
+    },
+    {
+        "id": 56,
+        "name": "Surf",
+        "type": "water",
+        "power": 90,
+        "accuracy": 100,
+        "description": "The user attacks everything around it by swamping its surroundings with a giant wave."
+    },
+    {
+        "id": 57,
+        "name": "Hydro Pump",
+        "type": "water",
+        "power": 110,
+        "accuracy": 80,
+        "description": "The target is blasted by a huge volume of water launched under great pressure."
+    },
+    {
+        "id": 81,
+        "name": "String-shot",
+        "type": "bug",
+        "power": null,
+        "accuracy": 95,
+        "description": "The opposing Pokémon are bound with silk blown from the user's mouth that harshly lowers the Speed stat."
+    },
+    {
+        "id": 450,
+        "name": "Bug-bite",
+        "type": "bug",
+        "power": 60,
+        "accuracy": 100,
+        "description": "The user bites the target. If the target is holding a Berry, the user eats it and gains its effect."
+    },
+    {
+        "id": 451,
+        "name": "X-Scissor",
+        "type": "bug",
+        "power": 80,
+        "accuracy": 100,
+        "description": "The user slashes at the target by crossing its scythes or claws as if they were a pair of scissors."
+    },
+    {
+        "id": 16,
+        "name": "Gust",
+        "type": "flying",
+        "power": 40,
+        "accuracy": 100,
+        "description": "A gust of wind is whipped up by wings and launched at the target to inflict damage."
+    },
+    {
+        "id": 19,
+        "name": "Wing-attack",
+        "type": "flying",
+        "power": 60,
+        "accuracy": 100,
+        "description": "The target is struck with large, imposing wings spread wide to inflict damage."
+    },
+    {
+        "id": 20,
+        "name": "Air Slash",
+        "type": "flying",
+        "power": 75,
+        "accuracy": 95,
+        "description": "The user attacks with a blade of air that slices even the sky. This may also make the target flinch."
+    },
+    {
+        "id": 84,
+        "name": "Thunder-shock",
+        "type": "electric",
+        "power": 40,
+        "accuracy": 100,
+        "description": "A jolt of electricity crashes down on the target to inflict damage. This may also leave the target with paralysis."
+    },
+    {
+        "id": 85,
+        "name": "Thunderbolt",
+        "type": "electric",
+        "power": 90,
+        "accuracy": 100,
+        "description": "A strong electric blast crashes down on the target. This may also leave the target with paralysis."
+    },
+    {
+        "id": 86,
+        "name": "Thunder",
+        "type": "electric",
+        "power": 110,
+        "accuracy": 70,
+        "description": "A wicked thunderbolt is dropped on the target to inflict damage. This may also leave the target with paralysis."
+    },
+    {
+        "id": 574,
+        "name": "Dazzling-gleam",
+        "type": "fairy",
+        "power": 80,
+        "accuracy": 100,
+        "description": "The user damages opposing Pokémon by emitting a powerful flash."
+    },
+    {
+        "id": 585,
+        "name": "Moonblast",
+        "type": "fairy",
+        "power": 95,
+        "accuracy": 100,
+        "description": "Borrowing the power of the moon, the user attacks the target. This may also lower the target's Sp. Atk stat."
+    },
+    {
+        "id": 586,
+        "name": "Play Rough",
+        "type": "fairy",
+        "power": 90,
+        "accuracy": 90,
+        "description": "The user plays rough with the target and attacks it. This may also lower the target's Attack stat."
+    },
+    {
+        "id": 92,
+        "name": "Poison-sting",
+        "type": "poison",
+        "power": 15,
+        "accuracy": 100,
+        "description": "The user stabs the target with a poisonous stinger. This may also poison the target."
+    },
+    {
+        "id": 188,
+        "name": "Sludge-bomb",
+        "type": "poison",
+        "power": 90,
+        "accuracy": 100,
+        "description": "Unsanitary sludge is hurled at the target. This may also poison the target."
+    },
+    {
+        "id": 189,
+        "name": "Poison Jab",
+        "type": "poison",
+        "power": 80,
+        "accuracy": 100,
+        "description": "The target is stabbed with a tentacle, arm, or the like steeped in poison. This may also poison the target."
+    },
+    {
+        "id": 317,
+        "name": "Rock-throw",
+        "type": "rock",
+        "power": 50,
+        "accuracy": 90,
+        "description": "The user picks up and throws a small rock at the target to attack."
+    },
+    {
+        "id": 397,
+        "name": "Stone-edge",
+        "type": "rock",
+        "power": 100,
+        "accuracy": 80,
+        "description": "The user stabs the target with a sharp stone. Critical hits land more easily."
+    },
+    {
+        "id": 398,
+        "name": "Rock Slide",
+        "type": "rock",
+        "power": 75,
+        "accuracy": 90,
+        "description": "Large boulders are hurled at the opposing team to inflict damage. This may also make the opposing team flinch."
+    },
+    {
+        "id": 1,
+        "name": "Tackle",
+        "type": "normal",
+        "power": 40,
+        "accuracy": 100,
+        "description": "A physical attack in which the user charges and slams into the target with its whole body."
+    },
+    {
+        "id": 2,
+        "name": "Scratch",
+        "type": "normal",
+        "power": 40,
+        "accuracy": 100,
+        "description": "Hard, pointed, and sharp claws rake the target to inflict damage."
+    },
+    {
+        "id": 3,
+        "name": "Hyper Beam",
+        "type": "normal",
+        "power": 150,
+        "accuracy": 90,
+        "description": "The target is attacked with a powerful beam. The user can't move on the next turn."
+    },
+    {
+        "id": 4,
+        "name": "Quick Attack",
+        "type": "normal",
+        "power": 40,
+        "accuracy": 100,
+        "description": "The user lunges at the target at a speed that makes it almost invisible. This move always goes first."
+    },
+    {
+        "id": 5,
+        "name": "Body Slam",
+        "type": "normal",
+        "power": 85,
+        "accuracy": 100,
+        "description": "The user drops onto the target with its full body weight. This may also leave the target with paralysis."
+    }
+]

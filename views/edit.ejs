@@ -1,0 +1,43 @@
+<%- include("./partials/header") %>
+<%- include("./partials/logout-section") %>
+<section>
+    <% if (error != "") { %>
+        <p class="error"><%= error %></p>
+    <% } %>
+    <h2>Editing: #<%= pokeData.order %> <%= pokeData.name%></h2>
+    <img src="<%= pokeData.imageUrl %>" alt="<%= pokeData.name%>" width="250px" class="edit-img">
+
+    <form action="/pokemon/<%= pokeData.name %>/edit" method="post" id="edit-form">
+        <div class="form-group">
+            <label for="nickname">Nickname</label>
+            <input type="text" id="nickname" name="nickname">
+        </div>
+        
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4" cols="50"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="meta">Meta?</label>
+            <input type="checkbox" name="meta" value="yes">
+        </div>
+        
+        <div class="form-group">
+            <label for="ability">Change move</label>
+            <select id="ability" name="ability" required>
+                <% for (let ability of abilityData) { %>
+                    <% if (ability.type === pokeData.type) { %>
+                    <option value="<%= ability.name %>"><%= ability.name %></option>
+                    <% } %>
+                <% } %>
+            </select>
+        </div>
+        
+        <button type="submit">Submit</button>
+    </form>
+    
+
+</section>
+
+<%- include("./partials/footer") %> 

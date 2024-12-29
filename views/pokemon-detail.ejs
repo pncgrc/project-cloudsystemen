@@ -1,0 +1,31 @@
+<%- include("./partials/header") %>
+<%- include("./partials/logout-section") %>
+<article class="pokemon-detail">
+    <h2>
+        #<%= pokeData.order %> <%= pokeData.name%>
+        <% if (user.role === "ADMIN") { %>
+            (<a href="/pokemon/<%= pokeData.name %>/edit">Edit</a>)
+        <% } %>
+    </h2>
+        <img src="<%= pokeData.imageUrl %>" alt="<%= pokeData.name%>" width="250px">
+    <ul>
+        <li>Nickname: <%= pokeData.nickname%></li>
+        <li>Description: <%= pokeData.description%></li>
+        <li>Type: <%= pokeData.type %></li>
+        <li>Pokédex number: <%= pokeData.order %></li>
+        <li>Meta pick: <%= pokeData.active === true ? "Yes" : "No" %></li>
+        <li>Hobbies: <%= pokeData.hobbies.join(", "); %></li>
+        <li>Favorite ability:
+            <ul>
+                <li>Name: <a href="/abilities/<%= pokeData.favoriteAbility.name %>"><%= pokeData.favoriteAbility.name %></a></li>
+                <li>Description: <%= pokeData.favoriteAbility.description %></li>
+                <li>Type: <%= pokeData.favoriteAbility.type %></li>
+                <li>Power: <%= pokeData.favoriteAbility.power === null ? "N/A" : pokeData.favoriteAbility.power %></li>
+                <li>Accuracy: <%= pokeData.favoriteAbility.accuracy === null ? "N/A" : pokeData.favoriteAbility.accuracy %></li>
+                <li>Move ID: <%= pokeData.favoriteAbility.id %></li>
+            </ul>
+        </li>
+    </ul>
+</article>
+
+<%- include("./partials/footer") %>
