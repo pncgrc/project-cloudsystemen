@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+
   setup-files:
     needs: checkout-code
     runs-on: ubuntu-latest
@@ -26,18 +27,21 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           echo "$KNOWN_HOSTS" > ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
+
   deploy:
     needs: setup-files
     runs-on: ubuntu-latest
     steps:
       - name: Deploy with Docker Compose
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          HOST: ${{ secrets.HOST }}
+          HOST: ${{ secrets.HOST }}  # Ensure this is in the format user@host
         run: |
-          ssh -i $SSH_PRIVATE_KEY $HOST << 'EOF'
+          # Ensure that the private key file is used for SSH
+          chmod 600 ~/.ssh/id_rsa  # Ensure the private key has the correct permissions
+          ssh -i ~/.ssh/id_rsa $HOST << 'EOF'
             cd project-cloudsystemen/  # Adjust the path
             git pull origin main  # Pull latest changes
             docker compose down  # Stop existing containers
             docker compose up -d  # Start updated containers
           EOF
+
