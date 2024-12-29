@@ -3,7 +3,7 @@ name: Docker Compose Deploy
 on:
   push:
     branches:
-      - main  # Replace with your target branch if needed
+      - main
 
 jobs:
   checkout-code:
