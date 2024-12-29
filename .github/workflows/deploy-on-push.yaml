@@ -26,6 +26,13 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           echo "$KNOWN_HOSTS" > ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
+  install-sshpass:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install sshpass
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sshpass  # Install sshpass
   deploy:
     needs: setup-files
     runs-on: ubuntu-latest
