@@ -32,9 +32,10 @@ jobs:
     steps:
       - name: Deploy with Docker Compose
         env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           HOST: ${{ secrets.HOST }}
         run: |
-          ssh -i ~/.ssh/id_rsa $HOST << 'EOF'
+          ssh -i $SSH_PRIVATE_KEY $HOST << 'EOF'
             cd project-cloudsystemen/  # Adjust the path
             git pull origin main  # Pull latest changes
             docker compose down  # Stop existing containers
