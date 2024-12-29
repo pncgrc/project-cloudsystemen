@@ -49,6 +49,7 @@ jobs:
           sshpass -p $MY_PASSWORD ssh -o StrictHostKeyChecking=no $HOST << EOF
             cd project-cloudsystemen/  # Adjust the path
             git pull origin main
+            docker container rm -f traefik
             docker-compose down  # Stop existing containers
             docker-compose up  # Start updated containers
           EOF
