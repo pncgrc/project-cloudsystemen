@@ -1,0 +1,37 @@
+name: Docker Compose Deploy
+
+on:
+  push:
+    branches:
+      - main  # Replace with your target branch if needed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup SSH Key and Known Hosts
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          KNOWN_HOSTS: ${{ secrets.KNOWN_HOSTS }}
+        run: |
+          # Setup SSH directory
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          echo "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Deploy with Docker Compose
+        env:
+          HOSTS: ${{ secrets.HOST }}
+        run: |
+          ssh -i ~/.ssh/id_rsa $HOST << 'EOF'
+            cd project-cloudsystemen/  # Adjust the path
+            git pull origin main  # Pull latest changes
+            docker compose down  # Stop existing containers
+            docker compose up -d  # Start updated containers
+          EOF
