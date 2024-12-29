@@ -48,7 +48,7 @@ jobs:
           # Use sshpass to log in with password authentication
           sshpass -p $MY_PASSWORD ssh -o StrictHostKeyChecking=no $HOST << EOF
             cd project-cloudsystemen/  # Adjust the path
-            git pull origin main  # Pull latest changes
+            git pull origin main
             sudo docker-compose down  # Stop existing containers
             sudo docker-compose up  # Start updated containers
           EOF
